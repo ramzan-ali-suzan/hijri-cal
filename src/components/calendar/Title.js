@@ -1,13 +1,19 @@
 import React from "react";
-import moment from "moment-hijri";
 
-const Title = () => {
+const Title = ({
+  hijriYear,
+  hijriMonth,
+  hijriMonthName,
+  onPreviousClick,
+  onNextClick,
+}) => {
   return (
     <div className="calendar-title">
+      <button onClick={onPreviousClick}>Previous</button>
       <h2 className="text-center">
-        {moment().format("iM")}. {moment().format("iMMMM")},{" "}
-        {moment().format("iYYYY")}
+        {hijriMonth}. {hijriMonthName}, {hijriYear}
       </h2>
+      <button onClick={onNextClick}>Next</button>
     </div>
   );
 };

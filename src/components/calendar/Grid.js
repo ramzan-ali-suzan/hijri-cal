@@ -1,11 +1,7 @@
 import React from "react";
-import {
-  getCurrentMonthLastDate,
-  getCurrentHijriDate,
-  getDay,
-} from "../../helpers/hijriDate";
+import { getMonthLastDate, getMonthFirstDay } from "../../helpers/hijriDate";
 
-const Grid = () => {
+const Grid = ({ hijriYear, hijriMonth }) => {
   const weekDays = [
     "Al ‘Ahad", // Sunday
     "Al ‘Ithnayn", // Monday
@@ -15,11 +11,16 @@ const Grid = () => {
     "Al Juma'a", // Friday
     "As Sabt", // Saturday
   ];
-  const lastDate = getCurrentMonthLastDate();
-  const today = getCurrentHijriDate();
-  const dayNumner = getDay();
-  const dates = Array.from({ length: lastDate }, (_, i) => i + 1);
-  const daysPadding = Array.from({ length: dayNumner }, (_, i) => i);
+
+  const daysPadding = Array.from(
+    { length: getMonthFirstDay(hijriYear, hijriMonth) },
+    (_, i) => i
+  );
+
+  const dates = Array.from(
+    { length: getMonthLastDate(hijriYear, hijriMonth) },
+    (_, i) => i + 1
+  );
 
   return (
     <div>
