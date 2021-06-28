@@ -1,7 +1,11 @@
-import React from "react";
 import { getMonthLastDate, getMonthFirstDay } from "../../helpers/hijriDate";
 
-const Grid = ({ hijriYear, hijriMonth }) => {
+type Props = {
+  hijriYear: number;
+  hijriMonth: number;
+};
+
+const Grid = ({ hijriYear, hijriMonth }: Props) => {
   const weekDays = [
     "Al ‘Ahad", // Sunday
     "Al ‘Ithnayn", // Monday

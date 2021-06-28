@@ -1,4 +1,12 @@
-import React from "react";
+import { MouseEventHandler } from "react";
+
+type Props = {
+  hijriYear: number;
+  hijriMonth: number;
+  hijriMonthName: string;
+  onPreviousClick: MouseEventHandler;
+  onNextClick: MouseEventHandler;
+};
 
 const Title = ({
   hijriYear,
@@ -6,7 +14,7 @@ const Title = ({
   hijriMonthName,
   onPreviousClick,
   onNextClick,
-}) => {
+}: Props) => {
   return (
     <div className="calendar-title">
       <button onClick={onPreviousClick}>Previous</button>
