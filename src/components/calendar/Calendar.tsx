@@ -29,6 +29,11 @@ const Calendar = () => {
     }
   };
 
+  const handleToday = () => {
+    setIYear(getYear(year));
+    setIMonth(getMonth(year, month, date));
+  };
+
   const handleNext = () => {
     if (iMonth < 12) {
       setIMonth(iMonth + 1);
@@ -49,6 +54,7 @@ const Calendar = () => {
         hijriMonth={iMonth}
         hijriMonthName={iMonthName}
         onPreviousClick={handlePrevious}
+        onTodayClick={handleToday}
         onNextClick={handleNext}
       ></Title>
       <Grid hijriYear={iYear} hijriMonth={iMonth}></Grid>

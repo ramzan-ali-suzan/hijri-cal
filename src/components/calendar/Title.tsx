@@ -5,6 +5,7 @@ type Props = {
   hijriMonth: number;
   hijriMonthName: string;
   onPreviousClick: MouseEventHandler;
+  onTodayClick: MouseEventHandler;
   onNextClick: MouseEventHandler;
 };
 
@@ -13,6 +14,7 @@ const Title = ({
   hijriMonth,
   hijriMonthName,
   onPreviousClick,
+  onTodayClick,
   onNextClick,
 }: Props) => {
   return (
@@ -21,6 +23,7 @@ const Title = ({
       <h2 className="text-center">
         {hijriMonth}. {hijriMonthName}, {hijriYear}
       </h2>
+      <button onClick={onTodayClick}>Today</button>
       <button onClick={onNextClick}>Next</button>
     </div>
   );
