@@ -4,8 +4,9 @@ import Grid from "./Grid";
 import {
   getYear,
   getMonth,
-  getGToHMonthName,
-  getHToHMonthName,
+  getMonthNameByGregorian,
+  getMonthName,
+  getDate,
 } from "../../helpers/hijriDate";
 
 const Calendar = () => {
@@ -16,8 +17,9 @@ const Calendar = () => {
 
   const [iYear, setIYear] = useState(getYear(year));
   const [iMonth, setIMonth] = useState(getMonth(year, month, date));
+  const [iDate, setIDate] = useState(getDate());
   const [iMonthName, setIMonthName] = useState(
-    getGToHMonthName(year, month, date)
+    getMonthNameByGregorian(year, month, date)
   );
 
   const handlePrevious = () => {
@@ -44,7 +46,7 @@ const Calendar = () => {
   };
 
   useEffect(() => {
-    setIMonthName(getHToHMonthName(iYear, iMonth));
+    setIMonthName(getMonthName(iYear, iMonth));
   }, [iMonth, iYear]);
 
   return (
@@ -57,7 +59,7 @@ const Calendar = () => {
         onTodayClick={handleToday}
         onNextClick={handleNext}
       ></Title>
-      <Grid hijriYear={iYear} hijriMonth={iMonth}></Grid>
+      <Grid hijriYear={iYear} hijriMonth={iMonth} hijriDate={iDate}></Grid>
     </div>
   );
 };

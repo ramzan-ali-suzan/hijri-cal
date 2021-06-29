@@ -8,15 +8,15 @@ export const getMonth = (year: number, month: number, day: number): number => {
   return Number(moment(`${year}/${month}/${day}`, "YYYY/M/D").format("iM"));
 };
 
-export const getDay = (year: number, month: number, day: number): number => {
-  return Number(moment(`${year}/${month}/${day}`, "YYYY/M/D").format("iD"));
+export const getDate = (): string => {
+  return moment().format("iYYYY/iM/iD");
 };
 
-export const getGToHMonthName = (year: number, month: number, day: number): string => {
+export const getMonthNameByGregorian = (year: number, month: number, day: number): string => {
   return moment(`${year}/${month}/${day}`, "YYYY/M/D").format("iMMMM");
 };
 
-export const getHToHMonthName = (iYear: number, iMonth: number): string => {
+export const getMonthName = (iYear: number, iMonth: number): string => {
   return moment(`${iYear}/${iMonth}`, "iYYYY/iM").format("iMMMM");
 };
 

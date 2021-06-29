@@ -1,5 +1,6 @@
 :root {
   --border-color: #eee;
+  --transparent-black: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -11,13 +12,17 @@
   text-align: center;
 }
 
+.mr-1 {
+  margin-right: 1em;
+}
+
 .navbar {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.75em 3em;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: var(--transparent-black) 0px 0px 0px 1px;
 }
 
 .app-title {
@@ -30,10 +35,19 @@
 }
 
 .calendar-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.25em;
 }
 
-.calendar-header {
+.calendar-title h2 {
+  font-size: 1.25em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.calendar-grid-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   border-top: 1px solid var(--border-color);
@@ -43,18 +57,17 @@
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(5, 1fr);
   border-top: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
 }
 
-.grid-item {
+.calendar-grid-item {
   text-align: center;
   padding: 1.25em;
   border-bottom: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
 }
 
-.grid-item.today {
-  background-color: #1abc9c2b;
+.calendar-grid-item.today {
+  background-color: #fddabd;
 }

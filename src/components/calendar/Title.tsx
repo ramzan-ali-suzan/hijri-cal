@@ -23,7 +23,9 @@ const Title = ({
       <h2 className="text-center">
         {hijriMonth}. {hijriMonthName}, {hijriYear}
       </h2>
-      <button onClick={onTodayClick}>Today</button>
+      <button className="mr-1" onClick={onTodayClick}>
+        Today
+      </button>
       <button onClick={onNextClick}>Next</button>
     </div>
   );
