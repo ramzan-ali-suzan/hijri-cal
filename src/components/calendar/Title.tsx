@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import { ArrowRight, ArrowLeft } from "react-feather";
 
 type Props = {
   hijriYear: number;
@@ -23,14 +24,14 @@ const Title = ({
         {hijriMonth}. {hijriMonthName}, {hijriYear}
       </h2>
       <div>
-        <button className="btn mr-1 warning" onClick={onTodayClick}>
+        <button className="btn mr-2 warning" onClick={onTodayClick}>
           Today
         </button>
         <button className="btn mr-1 success" onClick={onPreviousClick}>
-          Previous
+          <ArrowLeft color="#fff" />
         </button>
         <button className="btn success" onClick={onNextClick}>
-          Next
+          <ArrowRight color="#fff" />
         </button>
       </div>
     </div>
