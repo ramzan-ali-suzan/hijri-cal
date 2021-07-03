@@ -1,8 +1,11 @@
 const Navbar = () => {
   return (
-    <header className="navbar">
-      <h1 className="app-title">Hijri Calendar</h1>
-    </header>
+    <nav className="navbar">
+      <div className="container">
+        <h1 className="app-title">Hijri Calendar</h1>
+      </div>
+    </nav>
+
   );
 };
 

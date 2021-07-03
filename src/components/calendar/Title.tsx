@@ -19,14 +19,20 @@ const Title = ({
 }: Props) => {
   return (
     <div className="calendar-title">
-      <button onClick={onPreviousClick}>Previous</button>
       <h2 className="text-center">
         {hijriMonth}. {hijriMonthName}, {hijriYear}
       </h2>
-      <button className="mr-1" onClick={onTodayClick}>
-        Today
-      </button>
-      <button onClick={onNextClick}>Next</button>
+      <div>
+        <button className="btn mr-1 warning" onClick={onTodayClick}>
+          Today
+        </button>
+        <button className="btn mr-1 success" onClick={onPreviousClick}>
+          Previous
+        </button>
+        <button className="btn success" onClick={onNextClick}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };

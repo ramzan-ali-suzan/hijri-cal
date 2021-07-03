@@ -50,7 +50,7 @@ const Calendar = () => {
   }, [iMonth, iYear]);
 
   return (
-    <div className="calendar">
+    <div className="container calendar">
       <Title
         hijriYear={iYear}
         hijriMonth={iMonth}
