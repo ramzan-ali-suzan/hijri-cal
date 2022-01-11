@@ -17,18 +17,18 @@ const Grid = ({ hijriYear, hijriMonth, hijriDate }: Props) => {
     "As Sabt", // Saturday
   ];
 
-  const daysPadding = Array.from(
+  const datePaddings = Array.from(
     { length: getMonthFirstDay(hijriYear, hijriMonth) },
-    (_, i) => i
+    (_, index) => index
   );
 
   const dates = Array.from(
     { length: getMonthLastDate(hijriYear, hijriMonth) },
-    (_, i) => i + 1
+    (_, index) => index + 1
   );
 
-  const today = (day: number): boolean => {
-    return `${hijriYear}/${hijriMonth}/${day}` === hijriDate;
+  const today = (date: number): boolean => {
+    return `${hijriYear}/${hijriMonth}/${date}` === hijriDate;
   };
 
   return (
@@ -43,7 +43,7 @@ const Grid = ({ hijriYear, hijriMonth, hijriDate }: Props) => {
         })}
       </div>
       <div className="calendar-grid">
-        {daysPadding.map((value, index) => {
+        {datePaddings.map((_, index) => {
           return <div className="calendar-grid-item" key={index}></div>;
         })}
         {dates.map((value, index) => {

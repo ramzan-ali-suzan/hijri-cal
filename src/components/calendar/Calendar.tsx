@@ -6,7 +6,7 @@ import {
   getMonth,
   getMonthNameByGregorian,
   getMonthName,
-  getDate,
+  getFullDate,
 } from "../../helpers/hijriDate";
 
 const Calendar = () => {
@@ -17,7 +17,7 @@ const Calendar = () => {
 
   const [iYear, setIYear] = useState(getYear(year));
   const [iMonth, setIMonth] = useState(getMonth(year, month, date));
-  const [iDate, setIDate] = useState(getDate());
+  const [iDate] = useState(getFullDate());
   const [iMonthName, setIMonthName] = useState(
     getMonthNameByGregorian(year, month, date)
   );
