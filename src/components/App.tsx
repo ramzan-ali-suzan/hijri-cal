@@ -6,11 +6,13 @@ import moment from "moment-hijri";
 const App = () => {
   moment.locale("en");
   return (
-    <div>
-      <Navbar></Navbar>
-      <Calendar></Calendar>
+    <>
+      <div className="content-wrap">
+        <Navbar></Navbar>
+        <Calendar></Calendar>
+      </div>
       <Footer></Footer>
-    </div>
+    </>
   );
 };
 

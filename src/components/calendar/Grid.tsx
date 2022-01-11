@@ -8,10 +8,10 @@ type Props = {
 
 const Grid = ({ hijriYear, hijriMonth, hijriDate }: Props) => {
   const weekDays = [
-    "Al ‘Ahad", // Sunday
-    "Al ‘Ithnayn", // Monday
-    "Ath Thulathaa’", // Tuesday
-    "Al Arbi’aa’", // Wednesday
+    "Al 'Ahad", // Sunday
+    "Al 'Ithnayn", // Monday
+    "Ath Thulathaa'", // Tuesday
+    "Al Arbi'aa'", // Wednesday
     "Al Khamees", // Thursday
     "Al Juma'a", // Friday
     "As Sabt", // Saturday
