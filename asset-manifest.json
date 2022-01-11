@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hijri-cal/static/css/main.781d90a7.chunk.css",
+    "main.js": "/hijri-cal/static/js/main.066e6ba2.chunk.js",
+    "main.js.map": "/hijri-cal/static/js/main.066e6ba2.chunk.js.map",
+    "runtime-main.js": "/hijri-cal/static/js/runtime-main.dcc5fbe9.js",
+    "runtime-main.js.map": "/hijri-cal/static/js/runtime-main.dcc5fbe9.js.map",
+    "static/css/2.679831fc.chunk.css": "/hijri-cal/static/css/2.679831fc.chunk.css",
+    "static/js/2.ac48fe23.chunk.js": "/hijri-cal/static/js/2.ac48fe23.chunk.js",
+    "static/js/2.ac48fe23.chunk.js.map": "/hijri-cal/static/js/2.ac48fe23.chunk.js.map",
+    "index.html": "/hijri-cal/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/hijri-cal/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.781d90a7.chunk.css.map": "/hijri-cal/static/css/main.781d90a7.chunk.css.map",
+    "static/js/2.ac48fe23.chunk.js.LICENSE.txt": "/hijri-cal/static/js/2.ac48fe23.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dcc5fbe9.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.ac48fe23.chunk.js",
+    "static/css/main.781d90a7.chunk.css",
+    "static/js/main.066e6ba2.chunk.js"
+  ]
+}
