@@ -9,7 +9,11 @@ import {
   getFullDate,
 } from "../../helpers/hijriDate";
 
-const Calendar = () => {
+type Props = {
+  showGDate: boolean;
+};
+
+const Calendar = ({ showGDate }: Props) => {
   const today = new Date();
   const year = today.getFullYear();
   const month = today.getMonth() + 1;
@@ -59,7 +63,12 @@ const Calendar = () => {
         onTodayClick={handleToday}
         onNextClick={handleNext}
       ></Title>
-      <Grid hijriYear={iYear} hijriMonth={iMonth} hijriDate={iDate}></Grid>
+      <Grid
+        showGDate={showGDate}
+        hijriYear={iYear}
+        hijriMonth={iMonth}
+        hijriDate={iDate}
+      ></Grid>
     </div>
   );
 };

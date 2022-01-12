@@ -5,9 +5,9 @@ type Props = {
   hijriYear: number;
   hijriMonth: number;
   hijriMonthName: string;
-  onPreviousClick: MouseEventHandler;
-  onTodayClick: MouseEventHandler;
-  onNextClick: MouseEventHandler;
+  onPreviousClick: MouseEventHandler<HTMLButtonElement>;
+  onTodayClick: MouseEventHandler<HTMLButtonElement>;
+  onNextClick: MouseEventHandler<HTMLButtonElement>;
 };
 
 const Title = ({

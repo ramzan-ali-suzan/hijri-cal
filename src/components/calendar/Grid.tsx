@@ -1,12 +1,14 @@
+import moment from "moment-hijri";
 import { getMonthLastDate, getMonthFirstDay } from "../../helpers/hijriDate";
 
 type Props = {
+  showGDate: boolean;
   hijriYear: number;
   hijriMonth: number;
   hijriDate: string;
 };
 
-const Grid = ({ hijriYear, hijriMonth, hijriDate }: Props) => {
+const Grid = ({ showGDate, hijriYear, hijriMonth, hijriDate }: Props) => {
   const weekDays = [
     "Al 'Ahad", // Sunday
     "Al 'Ithnayn", // Monday
@@ -52,7 +54,15 @@ const Grid = ({ hijriYear, hijriMonth, hijriDate }: Props) => {
               className={`calendar-grid-item ${today(value) ? "today" : ""}`}
               key={index}
             >
-              {value}
+              <span>{value}</span>
+              {showGDate && (
+                <span className="g-date">
+                  {moment(
+                    `${hijriYear}/${hijriMonth}/${value}`,
+                    "iYYYY/iM/iD"
+                  ).format("D-MMM-YYYY")}
+                </span>
+              )}
             </div>
           );
         })}

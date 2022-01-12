@@ -4,6 +4,7 @@
   --subtle-white: #eee;
   --transparent-black: rgba(0, 0, 0, 0.05);
   --light-black: #363636;
+  --gray: #7a7a7a;
   --success: #48c78e;
   --success-dark: #36ae78;
   --success-light: #effaf5;
@@ -123,6 +124,29 @@ body {
   box-shadow: var(--transparent-black) 0px 0px 0px 1px;
 }
 
+.navbar .container,
+.g-date-label,
+.control-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.g-date-control {
+  padding-right: 0.625em;
+  margin-right: 0.625em;
+  border-right: 0.0625em solid var(--subtle-white);
+}
+
+.g-date-label {
+  cursor: pointer;
+}
+
+.g-date-label input {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
 .app-title {
   margin: 0;
   font-size: 1.5em;
@@ -175,6 +199,16 @@ body {
 
 .calendar-grid-item.today {
   background-color: var(--warning-light);
+}
+
+.calendar-grid-item span {
+  display: block;
+}
+
+.g-date {
+  font-size: 12px;
+  margin-top: 5px;
+  color: var(--gray);
 }
 
 footer {
