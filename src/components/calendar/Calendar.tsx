@@ -7,7 +7,7 @@ import {
   getMonthNameByGregorian,
   getMonthName,
   getFullDate,
-} from "../../helpers/hijriDate";
+} from "../../utils/hijriDate";
 
 type Props = {
   showGDate: boolean;

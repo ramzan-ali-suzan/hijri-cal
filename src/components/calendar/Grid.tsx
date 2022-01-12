@@ -1,5 +1,5 @@
 import moment from "moment-hijri";
-import { getMonthLastDate, getMonthFirstDay } from "../../helpers/hijriDate";
+import { getMonthLastDate, getMonthFirstDay } from "../../utils/hijriDate";
 
 type Props = {
   showGDate: boolean;
