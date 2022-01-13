@@ -1,14 +1,24 @@
-import moment from "moment-hijri";
-import { getMonthLastDate, getMonthFirstDay } from "../../utils/hijriDate";
+import {
+  getMonthLastDate,
+  getMonthFirstDay,
+  getGFullDate,
+} from "../../utils/hijriDate";
 
 type Props = {
   showGDate: boolean;
   hijriYear: number;
   hijriMonth: number;
   hijriDate: string;
+  dateAdjust: string;
 };
 
-const Grid = ({ showGDate, hijriYear, hijriMonth, hijriDate }: Props) => {
+const Grid = ({
+  showGDate,
+  hijriYear,
+  hijriMonth,
+  hijriDate,
+  dateAdjust,
+}: Props) => {
   const weekDays = [
     "Al 'Ahad", // Sunday
     "Al 'Ithnayn", // Monday
@@ -20,7 +30,7 @@ const Grid = ({ showGDate, hijriYear, hijriMonth, hijriDate }: Props) => {
   ];
 
   const datePaddings = Array.from(
-    { length: getMonthFirstDay(hijriYear, hijriMonth) },
+    { length: getMonthFirstDay(hijriYear, hijriMonth) + -Number(dateAdjust) },
     (_, index) => index
   );
 
@@ -57,10 +67,7 @@ const Grid = ({ showGDate, hijriYear, hijriMonth, hijriDate }: Props) => {
               <span>{value}</span>
               {showGDate && (
                 <span className="g-date">
-                  {moment(
-                    `${hijriYear}/${hijriMonth}/${value}`,
-                    "iYYYY/iM/iD"
-                  ).format("D-MMM-YYYY")}
+                  {getGFullDate(hijriYear, hijriMonth, value, dateAdjust)}
                 </span>
               )}
             </div>

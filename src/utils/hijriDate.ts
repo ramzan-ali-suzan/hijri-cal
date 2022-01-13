@@ -16,8 +16,8 @@ export const getMonthNameByGregorian = (year: number, month: number, date: numbe
   return moment(`${year}/${month}/${date}`, "YYYY/M/D").format("iMMMM");
 };
 
-export const getFullDate = (): string => {
-  return moment().format("iYYYY/iM/iD");
+export const getFullDate = (dateAdjust: string): string => {
+  return moment().add(Number(dateAdjust), "days").format("iYYYY/iM/iD");
 };
 
 export const getMonthFirstDay = (iYear: number, iMonth: number): number => {
@@ -26,4 +26,8 @@ export const getMonthFirstDay = (iYear: number, iMonth: number): number => {
 
 export const getMonthLastDate = (iYear: number, iMonth: number): number => {
   return moment(`${iYear}/${iMonth}/30`, "iYYYY/iM/iD").isValid() ? 30 : 29;
+};
+
+export const getGFullDate = (iYear: number, iMonth: number, iDate: number, dateAdjust: string): string => {
+  return moment(`${iYear}/${iMonth}/${iDate}`, "iYYYY/iM/iD").add(-Number(dateAdjust), "days").format("D-MMM-YYYY")
 };

@@ -1,14 +1,18 @@
 import { ChangeEventHandler } from "react";
-import useStateWithLocalStorage from "../utils/useStateWithLocalStorage";
 
 type Props = {
   showGDate: boolean;
+  dateAdjust: string;
   onGDateChange: ChangeEventHandler<HTMLInputElement>;
+  onDateAjdust: ChangeEventHandler<HTMLSelectElement>;
 };
 
-const Navbar = ({ showGDate, onGDateChange }: Props) => {
-  const [dateAdjust, adjustDate] = useStateWithLocalStorage("date-adjust");
-
+const Navbar = ({
+  showGDate,
+  onGDateChange,
+  dateAdjust,
+  onDateAjdust,
+}: Props) => {
   return (
     <nav className="navbar">
       <div className="container">
@@ -31,7 +35,7 @@ const Navbar = ({ showGDate, onGDateChange }: Props) => {
               name="date-adjust"
               id="date-adjust-select"
               value={dateAdjust}
-              onChange={(e) => adjustDate(e.target.value)}
+              onChange={(e) => onDateAjdust(e)}
             >
               <option value="0">0</option>
               <option value="+1">+1</option>

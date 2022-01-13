@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import Title from "./Title";
 import Grid from "./Grid";
 import {
@@ -11,9 +12,10 @@ import {
 
 type Props = {
   showGDate: boolean;
+  dateAdjust: string;
 };
 
-const Calendar = ({ showGDate }: Props) => {
+const Calendar = ({ showGDate, dateAdjust }: Props) => {
   const today = new Date();
   const year = today.getFullYear();
   const month = today.getMonth() + 1;
@@ -21,7 +23,7 @@ const Calendar = ({ showGDate }: Props) => {
 
   const [iYear, setIYear] = useState(getYear(year));
   const [iMonth, setIMonth] = useState(getMonth(year, month, date));
-  const [iDate] = useState(getFullDate());
+  const [iDate, setIDate] = useState(getFullDate(dateAdjust));
   const [iMonthName, setIMonthName] = useState(
     getMonthNameByGregorian(year, month, date)
   );
@@ -50,8 +52,9 @@ const Calendar = ({ showGDate }: Props) => {
   };
 
   useEffect(() => {
+    setIDate(getFullDate(dateAdjust));
     setIMonthName(getMonthName(iYear, iMonth));
-  }, [iMonth, iYear]);
+  }, [dateAdjust, iYear, iMonth]);
 
   return (
     <div className="container calendar">
@@ -68,6 +71,7 @@ const Calendar = ({ showGDate }: Props) => {
         hijriYear={iYear}
         hijriMonth={iMonth}
         hijriDate={iDate}
+        dateAdjust={dateAdjust}
       ></Grid>
     </div>
   );
