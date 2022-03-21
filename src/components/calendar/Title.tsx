@@ -27,10 +27,18 @@ const Title = ({
         <button className="btn mr-2 warning" onClick={onTodayClick}>
           Today
         </button>
-        <button className="btn mr-1 success" onClick={onPreviousClick}>
+        <button
+          className="btn mr-1 success"
+          aria-label="Previous Month"
+          onClick={onPreviousClick}
+        >
           <ArrowLeft color="#fff" />
         </button>
-        <button className="btn success" onClick={onNextClick}>
+        <button
+          className="btn success"
+          aria-label="Next Month"
+          onClick={onNextClick}
+        >
           <ArrowRight color="#fff" />
         </button>
       </div>
