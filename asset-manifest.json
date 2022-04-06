@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hijri-cal/static/css/main.ff7898fa.chunk.css",
-    "main.js": "/hijri-cal/static/js/main.8caaa0e3.chunk.js",
-    "main.js.map": "/hijri-cal/static/js/main.8caaa0e3.chunk.js.map",
+    "main.js": "/hijri-cal/static/js/main.577e52e7.chunk.js",
+    "main.js.map": "/hijri-cal/static/js/main.577e52e7.chunk.js.map",
     "runtime-main.js": "/hijri-cal/static/js/runtime-main.dcc5fbe9.js",
     "runtime-main.js.map": "/hijri-cal/static/js/runtime-main.dcc5fbe9.js.map",
     "static/css/2.679831fc.chunk.css": "/hijri-cal/static/css/2.679831fc.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.52af609b.chunk.js",
     "static/css/main.ff7898fa.chunk.css",
-    "static/js/main.8caaa0e3.chunk.js"
+    "static/js/main.577e52e7.chunk.js"
   ]
 }
