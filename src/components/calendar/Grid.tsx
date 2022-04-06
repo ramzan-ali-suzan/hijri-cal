@@ -30,7 +30,12 @@ const Grid = ({
   ];
 
   const datePaddings = Array.from(
-    { length: getMonthFirstDay(hijriYear, hijriMonth) + -Number(dateAdjust) },
+    {
+      length:
+        getMonthFirstDay(hijriYear, hijriMonth) + -Number(dateAdjust) === 7
+          ? 0
+          : getMonthFirstDay(hijriYear, hijriMonth) + -Number(dateAdjust),
+    },
     (_, index) => index
   );
 
